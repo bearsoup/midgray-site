@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Bodoni 72';
+  src: url('../assets/fonts/BodoniSvtyTwoITCTT-Book.woff2') format('woff2'),
+       url('../assets/fonts/BodoniSvtyTwoITCTT-Book.woff') format('woff'),
+       url('../assets/fonts/BodoniSvtyTwoITCTT-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noyh R';
+  src: url('../assets/fonts/NoyhRExtralight.woff2') format('woff2'),
+ 	     url('../assets/fonts/NoyhRExtralight.woff') format('woff'),
+       url('../assets/fonts/NoyhRExtralight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+.noyh,
+.more-button,
+.title,
+.register h2,
+.submit {
+  font-family: 'Noyh R', sans-serif;
+}

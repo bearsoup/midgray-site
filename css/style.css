@@ -1,0 +1,197 @@
+body {
+  font-family: 'Bodoni 72', serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.section {
+  min-height: 100vh;
+  /*  this enables flexbox *the modern layout mode in css)  */
+  display: flex;
+  position: relative;
+}
+
+/* here we have a little helper class that adds padding to our sections that can be reused and just does one thing. keeps css light, less writing the same code again and again */
+.section-pad {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.container {
+  max-width: 810px;
+  margin: auto;
+}
+
+.work-info {
+  background-color: #D8D8D8;
+  background-color: rgba(216, 216, 216, 0.9);
+  max-width: 855px;
+  min-width: 64vw;
+  border: 12px solid #F7F0E3;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  margin: auto;
+}
+
+.work-info p {
+  max-width: 650px;
+  padding: 0 40px;
+  text-align: left;
+  margin: auto;
+	font-size: 28px;
+  line-height: 1.85;
+	color: #fff;
+}
+
+.intro {
+	background-image: linear-gradient(152deg, #FFFFFF 51%, #999999 67%);
+	border: 12px solid #FAEBD2;
+  color: #fff;
+}
+
+.intro p {
+  font-size: 32px;
+  line-height: 1.6;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/* another helper/utility class */
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear {
+  /*  here we set the opacity as a starting point  */
+  opacity: 0;
+  /*  here we include the animation name  */
+  animation-name: fadeIn;
+  /*  set a duration and delay  */
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+  /*  make sure the end state stays the same  */
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-300vw);
+  }
+}
+
+.mix-difference {
+  /*  our mix blend mode allows us to mix the current layer's style/colors with that of what's behind it to create some really cool effects */
+  mix-blend-mode: difference;
+}
+
+.work-1 {
+  background-image: url(../assets/img/noindisguise-bg.jpg);
+}
+
+.work-2 {
+  background-image: url(../assets/img/lastnight-bg.jpg);
+}
+
+.work-3 {
+  background-image: url(../assets/img/yesindisguise-bg.jpg);
+}
+
+.work {
+  text-align:  center;
+}
+
+.work .container {
+/*  this will force our content to display on top of our shapes  */
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size:  48px;
+  color: #4A4A4A;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 64px 0 28px 0;
+}
+
+.button-wrapper {
+  margin-top: 48px;
+  margin-bottom: 58px;
+}
+
+.more-button {
+  background: #FFF6E7;
+  background: rgba(255, 246, 231, 0.85);
+  font-size: 25px;
+  color: #4A4A4A;
+  text-align: center;
+	text-transform: uppercase;
+  text-decoration: line-through;
+  padding: 8px 40px 2px 40px;
+}
+
+.scroll-to {
+  position: absolute;
+  left: 50%;
+  bottom: 3vh;
+
+  width: 64px;
+  height: 32px;
+
+  background-image: url(../assets/img/svg/down-arrow-light.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  transform: translateX(-50%);
+
+}
+
+@media (max-width: 640px) {
+
+  .logo {
+    max-width: 64px;
+    margin-bottom: 24px;
+  }
+
+  .intro p {
+    font-size: 20px;
+  }
+
+  .work-info p {
+    font-size: 18px;
+  }
+
+  .scroll-to {
+    display: none;
+  }
+
+}

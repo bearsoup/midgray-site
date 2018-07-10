@@ -1,0 +1,13 @@
+/* we are running our viewport transitions only on wider screens
+so that we have more confidence they will run properly (as fade/scroll
+linked transitions on mobile can be patchy */
+@media (min-width: 640px) {
+  .work-info {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+  .in-viewport .work-info {
+    opacity: 1;
+  }
+}
