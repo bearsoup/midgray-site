@@ -178,7 +178,7 @@ body {
 @media (max-width: 640px) {
 
   .logo {
-    max-width: 64px;
+    max-width: 200px;
     margin-bottom: 24px;
   }
 
